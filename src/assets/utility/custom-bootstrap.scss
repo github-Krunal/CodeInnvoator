@@ -1,5 +1,9 @@
 @import "color-code.scss";
 
-.btn-primary {
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:disabled:hover .btn-primary:active:hover {
 	color: $white-color;
 }

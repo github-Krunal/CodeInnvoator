@@ -1,0 +1,15 @@
+@import "~@angular/material/theming";
+@import "color-code.scss";
+$mat-custom: (
+	200: $theme-color,
+	contrast: (
+		200: $dark-primary-text,
+	),
+);
+@include mat-core();
+
+$primary: mat-palette($mat-custom, 200);
+$accent: mat-palette($mat-custom, 200);
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
