@@ -7,3 +7,16 @@
 .btn-primary:disabled:hover .btn-primary:active:hover {
 	color: $white-color;
 }
+.btn-outline-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary:disabled:hover .btn-outline-primary:active:hover {
+	color: $theme-color;
+	background: $white-color;
+}
+.btn:focus,
+.btn:active {
+	outline: none !important;
+	box-shadow: none !important;
+}
