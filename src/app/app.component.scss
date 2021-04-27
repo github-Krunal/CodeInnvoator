@@ -1,0 +1,48 @@
+@import "../assets/utility/mixin.scss";
+@import "../assets/utility/font-size.scss";
+@import "../assets/utility/color-code.scss";
+
+$social-site-size: 25;
+.profile-image {
+	@include project-image(60);
+}
+.manager-image {
+	@include flex-center;
+
+	img {
+		@include project-image(35);
+	}
+}
+.facebook {
+	@include project-image(20, #3b5998);
+}
+.instagram {
+	@include project-image(20, #c32aa3);
+}
+.linkedin {
+	@include project-image(20, #0a66c2);
+}
+.twitter {
+	@include project-image(20, #1da1f2);
+}
+.employee-details-image {
+	@include flex-center;
+	margin-top: -30px;
+	z-index: 1;
+}
+.employee-details-top {
+	background: url(../assets/images/girl.jpg) center center/cover no-repeat;
+	filter: blur(2px);
+	height: 80px;
+}
+.employee-card-title {
+	text-align: center;
+	font-size: $font-size-lg;
+	font-weight: $font-weight-xl;
+}
+.card-footer {
+	@include flex-center;
+	.fa {
+		margin: 0 4px;
+	}
+}

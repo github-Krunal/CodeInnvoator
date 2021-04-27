@@ -1,15 +1,25 @@
 @import "~@angular/material/theming";
 @import "color-code.scss";
+@import "font-family.scss";
+
+// for color contrast
 $mat-custom: (
 	200: $theme-color,
 	contrast: (
 		200: $dark-primary-text,
 	),
 );
+
+// for font typography
+$typography-configuration: mat-typography-config(
+	$font-family: $theme-font-family,
+);
+
 @include mat-core();
 
 $primary: mat-palette($mat-custom, 200);
 $accent: mat-palette($mat-custom, 200);
 $theme: mat-light-theme($primary, $accent);
 
+@include angular-material-typography($typography-configuration);
 @include angular-material-theme($theme);

@@ -1,7 +1,8 @@
 @import "../utility/custom";
 @import "~bootstrap/scss/bootstrap";
-@import "../utility/color-code.scss";
-@import "../utility/font-size.scss";
-@import "../utility/font-family.scss";
+@import "color-code.scss";
+@import "font-size.scss";
+@import "font-family.scss";
+@import "mixin.scss";
 @import "custom-bootstrap.scss";
 @import "custom-angular.scss";
