@@ -1,0 +1,22 @@
+@import "../utility/font-size.scss";
+
+// card Title size
+.title-lg {
+	font-size: $font-size-lg;
+	font-weight: $font-weight-xl;
+}
+.title-xl {
+	font-size: $font-size-xl;
+	font-weight: $font-weight-xl;
+}
+.title-xxl {
+	font-size: $font-size-xxl;
+	font-weight: $font-weight-xl;
+}
+
+//align vertical and Horizontal center
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

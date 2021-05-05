@@ -1,7 +1,13 @@
 @import "color-code.scss";
 
-// mixin for images
+// flex
+@mixin flex($justify-content, $align-items) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
 
+// generate images
 @mixin project-image($size: 40, $background-color: $theme-color) {
 	width: $size + px;
 	height: $size + px;
@@ -12,10 +18,4 @@
 	align-items: center;
 	background: $background-color;
 	color: $white-color;
-}
-
-@mixin flex-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
