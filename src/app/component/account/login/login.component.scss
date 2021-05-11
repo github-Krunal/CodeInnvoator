@@ -1,13 +1,25 @@
 @import "../../../../assets/utility/mixin.scss";
+@import "../../../../assets/utility/custom-form-control.scss";
 
 .login-form {
 	min-height: 100vh;
 }
 .login-form-card {
 	width: 400px;
-	height: 500px;
 	padding: 30px;
 }
 .login-form-password-link {
 	@include flex(space-between, baseline);
+}
+
+@include enterTextboxSize($textbox-size-lg);
+
+.login-forgot-password {
+	@include flex(space-between, "");
+}
+
+@media screen and (max-width: 400px) {
+	.container-fluid {
+		padding: 0 0;
+	}
 }

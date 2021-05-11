@@ -1,21 +1,37 @@
-<div class="container-fluid">
-	<div class="flex-center login-form">
-		<mat-card class="login-form-card">
-			<div class=" flex-center h-100">
-				<div class="w-100">
-					<!-- <div class="title-xl text-center">Sign In</div> -->
-					<div class="custom-form-group">
-						<label for="Username" class="form-label custom-form-label">Username</label>
-						<input type="text" class="form-control custom-form-control" id="Username" placeholder="Username">
-					</div>
+<div class="flex-center login-form">
+	<mat-card class="login-form-card">
+		<div class=" flex-center h-100">
+			<div class="w-100">
 
-					<div class="custom-form-group">
-						<label for="Password" class="form-label custom-form-label">Password</label>
-						<input type="Password" class="form-control custom-form-control" id="Password" placeholder="Password">
-					</div>
+				<!-- header -->
+				<div class="title-xl text-center mb-4">Login In</div>
 
+				<!-- input control -->
+				<div class="custom-form-group">
+					<input type="text" class="form-control custom-form-control" id="Username" placeholder="Username">
+				</div>
+				<div class="custom-form-group">
+					<input type="Password" class="form-control custom-form-control" id="Password" placeholder="Password">
+				</div>
+
+				<!--keep signIn and forgot password link -->
+				<div class="login-forgot-password">
+					<p>
+						<mat-checkbox class="example-margin">Keep me signed in</mat-checkbox>
+					</p>
+					<button type="button" class="btn btn-link">Forgot Password ?</button>
+				</div>
+
+				<!-- sign in button -->
+				<div class="d-grid gap-2 mb-4 ">
+					<button class="btn btn-primary shadow " type="button">Sign In</button>
+				</div>
+
+				<!-- link for new account -->
+				<div class="text-center">
+					Not a member ? <a class="btn-link" href="">Create Account</a>
 				</div>
 			</div>
-		</mat-card>
-	</div>
+		</div>
+	</mat-card>
 </div>
