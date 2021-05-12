@@ -1,0 +1,20 @@
+@import "../../../../assets/utility/utility.scss";
+
+app-project-information {
+	.p-info-toolbar {
+		background: $white-color;
+		.mat-toolbar-row {
+			display: flex;
+			justify-content: space-between;
+		}
+		img {
+			widows: 125px;
+			height: 40px;
+		}
+		.title-lg {
+			.mat-icon {
+				transform: translate(0, 2px);
+			}
+		}
+	}
+}
