@@ -4,16 +4,28 @@ app-project-information {
 	.p-info-toolbar {
 		background: $white-color;
 		.mat-toolbar-row {
-			display: flex;
-			justify-content: space-between;
+			@include flex(space-between, "", 0);
 		}
-		img {
-			widows: 125px;
-			height: 40px;
-		}
+
 		.title-lg {
 			.mat-icon {
 				transform: translate(0, 2px);
+			}
+		}
+	}
+	.p-info-line-clamp {
+		@include line-clamp(3);
+	}
+
+	.p-info-details {
+		@include flex("space-around", "", 30);
+		div {
+			height: 180px;
+			background: $fourth-color;
+			flex: 1 0 0;
+			img {
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}

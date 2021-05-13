@@ -1,10 +1,11 @@
 @import "color-code.scss";
 
 // flex
-@mixin flex($justify-content, $align-items) {
+@mixin flex($justify-content, $align-items, $gap) {
 	display: flex;
 	justify-content: $justify-content;
 	align-items: $align-items;
+	gap: $gap + px;
 }
 
 // generate images
@@ -18,4 +19,11 @@
 	align-items: center;
 	background: $background-color;
 	color: $white-color;
+}
+// clamp line
+@mixin line-clamp($clamp-line) {
+	display: -webkit-box;
+	-webkit-line-clamp: $clamp-line;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
