@@ -14,16 +14,14 @@
 		</mat-toolbar-row>
 	</mat-toolbar>
 </p>
-
 <div class="container-fluid">
 	<div class="text-center">
 		<div class="text-uppercase title-lg mt-3">
 			Awsome idas. creative design. performing result
 		</div>
 		<div class="mt-3 mb-3 flex-center">
-			<mat-radio-group aria-label="Select an option" class="smallRadio">
-				<mat-radio-button value="1"></mat-radio-button>
-				<mat-radio-button value="2"></mat-radio-button>
+			<mat-radio-group aria-label="Select an option" class="smallRadio" (change)="radioChange($event)">
+				<mat-radio-button value="1" *ngFor="let item of abc" [value]="item"></mat-radio-button>
 			</mat-radio-group>
 		</div>
 		<div class="flex-center">
@@ -31,25 +29,49 @@
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam non tempora, eos architecto esse, harum officia eaque recusandae labore amet sequi blanditiis ipsa consequuntur laudantium deleniti corrupti corporis tempore animi consectetur earum molestias! Impedit qui quam ullam, eum odit in a error minus sint modi praesentium delectus excepturi officia ipsum vel, provident consequatur neque eius quisquam nulla doloremque facilis sit! Unde vero cumque error accusantium est nam voluptatibus tempore minus repudiandae numquam officia excepturi ea eos autem aut aliquid aspernatur aperiam, ducimus rem sit ipsum expedita! Fugiat, itaque perferendis quisquam accusamus dicta veritatis beatae aspernatur dolore hic cumque vero reiciendis eligendi repudiandae eveniet animi maiores inventore maxime officia id modi eos officiis vel culpa! Quod tempora incidunt ipsum quos sit omnis porro ipsam sequi recusandae repellendus excepturi explicabo fuga itaque, est veritatis? Repudiandae ratione facere enim obcaecati totam cumque quos, ipsa non, culpa explicabo assumenda modi aperiam accusantium. Est aliquid culpa, dolor tenetur, quod sapiente similique animi ea quibusdam unde facilis veritatis repellendus. Iusto temporibus officia earum quo! Consequuntur omnis veritatis, fugiat in quos suscipit quae! Itaque tempore vel error aperiam nemo mollitia adipisci aspernatur veritatis, pariatur sint eaque quod eius ut odit voluptatum, hic non alias. Vel, aut ullam.
 			</div>
 		</div>
-		<div class="mt-5 p-info-details">
-			<div>
-				<img src="../../../../assets/images/tech (2).jpg" class="img-fluid" alt="...">
+		<ng-container *ngFor="let projectDetailsDiv of abc">
+			<div class="p-info-details-1" *ngIf="projectDetailsDiv.name==xyz">
+				<div class="mt-5 p-info-details">
+					<div>
+						<img [src]="projectDetailsDiv.images" class="img-fluid" alt="...">
+					</div>
+					<div>
+						<img [src]="projectDetailsDiv.images" class="img-fluid" alt="...">
+					</div>
+					<div>
+						<img [src]="projectDetailsDiv.images" class="img-fluid" alt="...">
+					</div>
+				</div>
+				<div class="mt-4 p-info-details">
+					<div>
+						<img [src]="projectDetailsDiv.images" class="img-fluid" alt="...">
+					</div>
+					<div>
+						<img [src]="projectDetailsDiv.images" class="img-fluid" alt="...">
+					</div>
+				</div>
 			</div>
-			<div>
-				<img src="../../../../assets/images/tech (3).jpg" class="img-fluid" alt="...">
+		</ng-container>
+		<!-- <div class="p-info-details-2">
+			<div class="mt-5 p-info-details">
+				<div>
+					<img src="../../../../assets/images/computer.jpg" class="img-fluid" alt="...">
+				</div>
+				<div>
+					<img src="../../../../assets/images/social1 (4).jpg" class="img-fluid" alt="...">
+				</div>
+				<div>
+				</div>
 			</div>
-			<div>
-				<img src="../../../../assets/images/social1 (1).jpg" class="img-fluid" alt="...">
-			</div>
-		</div>
-		<div class="mt-4 p-info-details">
-			<div>
-				<img src="../../../../assets/images/social1 (2).jpg" class="img-fluid" alt="...">
+			<div class="mt-4 p-info-details">
+				<div>
 
+
+				</div>
+				<div>
+
+				</div>
 			</div>
-			<div>
-				<img src="../../../../assets/images/social1 (3).jpg" class="img-fluid" alt="...">
-			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
