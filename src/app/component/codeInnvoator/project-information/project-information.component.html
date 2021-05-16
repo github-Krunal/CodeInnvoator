@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<ng-container *ngFor="let projectDetailsDiv of abc">
-			<div class="p-info-details-1" *ngIf="projectDetailsDiv.name==xyz">
+			<div class="p-info-details-1" *ngIf="projectDetailsDiv.name==xyz" @slide>
 				<div class="mt-5 p-info-details">
 					<div>
 						<img [src]="projectDetailsDiv.images" class="img-fluid" alt="...">
