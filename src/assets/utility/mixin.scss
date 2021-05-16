@@ -1,7 +1,7 @@
 @import "color-code.scss";
 
 // flex
-@mixin flex($justify-content, $align-items, $gap) {
+@mixin flex($justify-content, $align-items, $gap: 0) {
 	display: flex;
 	justify-content: $justify-content;
 	align-items: $align-items;
@@ -26,4 +26,20 @@
 	-webkit-line-clamp: $clamp-line;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+}
+
+// custom radio button
+
+@mixin custom-angular-radio-size($size: 30) {
+	.mat-radio-container,
+	.mat-radio-outer-circle,
+	.mat-radio-inner-circle {
+		height: $size + px;
+		width: $size + px;
+	}
+
+	.mat-radio-button .mat-radio-ripple {
+		height: 0;
+		width: 0;
+	}
 }

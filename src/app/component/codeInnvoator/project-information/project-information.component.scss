@@ -29,4 +29,7 @@ app-project-information {
 			}
 		}
 	}
+	.smallRadio {
+		@include custom-angular-radio-size(10);
+	}
 }

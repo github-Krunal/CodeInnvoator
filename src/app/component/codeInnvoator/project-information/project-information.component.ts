@@ -7,7 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation:ViewEncapsulation.None
 })
 export class ProjectInformationComponent implements OnInit {
-
+  public disabled: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
