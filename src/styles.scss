@@ -10,6 +10,9 @@
 	letter-spacing: 0.2px;
 }
 
+body {
+	overflow: hidden;
+}
 .head {
 	font-size: $font-size-xl;
 	font-weight: $font-weight-lg;
