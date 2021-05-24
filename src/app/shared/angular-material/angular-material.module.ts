@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
@@ -32,8 +32,12 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
+import { BreadcumComponent } from 'src/app/component/breadcum/breadcum.component';
+import { CommonModule } from '@angular/common';
+
 
 const MaterialComponents = [
+  CommonModule,
   DragDropModule,
   MatCheckboxModule,
   MatCheckboxModule,
@@ -68,11 +72,20 @@ const MaterialComponents = [
   MatPaginatorModule,
   MatDatepickerModule,
   MatNativeDateModule, 
-  MatRippleModule
+  MatRippleModule,
 ];
-
+const componentDeclaration = [
+  BreadcumComponent
+]
 @NgModule({
+  declarations:[componentDeclaration],
   imports: [MaterialComponents],
-  exports: [MaterialComponents],
+  exports: [MaterialComponents,
+  componentDeclaration
+  ],
+   schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+  ],
 })
 export class AngularMaterialModule {}
