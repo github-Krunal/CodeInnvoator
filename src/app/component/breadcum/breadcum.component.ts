@@ -24,29 +24,26 @@ export class BreadcumComponent implements OnInit {
   public breadcumList: { url?: string, label?: string }[] = [];
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+    this.abc();
   }
 
   ngOnInit() {
-    let url: string = "";
+  }
+  abc() {
+      let url: string = "";
     let label:string="";
     this.router.events.subscribe(event => {
-      debugger
-      if (event instanceof ActivationStart) {
+        if (event instanceof ActivationStart) {
         label = event.snapshot.data.breadcrumb;
-        // this.breadcumList.push({url:event.snapshot.routeConfig?.path+'?',label: event.snapshot.data.breadcrumb });
-        this.breadcumList.push({ url: url, label: label });
-
       }
-      if (event instanceof NavigationStart) {
-        url = event.url;
+        if (event instanceof NavigationEnd) {
+        this.breadcumList.push({ url: event.url, label: label });
       }
-      if (event instanceof NavigationEnd) {
-        this.breadcumList.push({ url: url, label: label });
-      }
+      this.breadcumList = this.breadcumList.filter((v, i, a) => a.findIndex(p => p.label === v.label) === i);
     });
-
-  
-    
+    // 1 store at localstorage
+    // 2 get from at localstorage
+    // display from get from at localstorage
   }
 
   }

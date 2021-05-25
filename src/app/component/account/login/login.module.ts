@@ -7,6 +7,9 @@ import { AngularMaterialModule } from 'src/app/shared/angular-material/angular-m
 const login: Routes = [{
   path: '',
   component:LoginComponent
+},{
+  path: '',
+  component:LoginComponent
 }]
 
 @NgModule({
