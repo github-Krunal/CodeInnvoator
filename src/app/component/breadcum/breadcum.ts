@@ -1,4 +1,6 @@
 export class Breadcum {
-	public url?: string;
+
+	public path?: string|undefined;
+	public url?: string|undefined;
 	public label?: string;
 }
