@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'project-information', loadChildren: () => import('./component/codeInnvoator/project-information/project-information.module').then((project) => project.ProjectInformationModule),
-      data: { breadcrumb: 'project information' },
+      data: { breadcrumb: 'Home' },
   }
 ];
 

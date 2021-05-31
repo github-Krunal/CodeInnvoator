@@ -8,7 +8,7 @@ const login: Routes = [{
   path: '',
   component:LoginComponent
 },{
-  path: '',
+  path: '/:id',
   component:LoginComponent
 }]
 

@@ -1,13 +1,9 @@
 <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a routerLink="" class="breadcrumb-text">Home</a></li>
-    <ng-container *ngFor="let breadcrumb of breadcumList; let i = index">
-        <li class="breadcrumb-item" *ngIf="i!=breadcumList.length-1"><a class="breadcrumb-text" (click)="backToPreviousBreadcum(i)">{{breadcrumb.label}}</a></li>
-        <li class="breadcrumb-item" *ngIf="i===breadcumList.length-1"><a>{{breadcrumb.label}}</a></li>
+    <li class="breadcrumb-item" *ngIf="breadcumList&&breadcumList.length>0"><a (click)="backToPreviousBreadcum(9999)" class="breadcrumb-text">Home</a></li>
+    <ng-container *ngIf="breadcumList&&breadcumList.length>0">
+        <ng-container *ngFor="let breadcrumb of breadcumList; let i = index">
+            <li class="breadcrumb-item" *ngIf="i!=breadcumList.length-1"><a class="breadcrumb-text" (click)="backToPreviousBreadcum(i)">{{breadcrumb.label}}</a></li>
+            <li class="breadcrumb-item" *ngIf="i===breadcumList.length-1"><a>{{breadcrumb.label}}</a></li>
+        </ng-container>
     </ng-container>
-
-    <!-- <li *ngFor="let breadcrumb of breadcumList; let i = index" class="breadcrumb-item active" aria-current="page">
-        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active">krunal</a>
-        <a [routerLink]="[breadcrumb.url]" *ngIf="i<=(breadcumList.length-(i+1))">{{breadcrumb.label}}</a>
-        <a *ngIf="i===breadcumList.length-1">{{breadcrumb.label}}</a>
-    </li> -->
 </ol>
