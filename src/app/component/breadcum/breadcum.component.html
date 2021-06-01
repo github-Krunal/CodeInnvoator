@@ -2,8 +2,10 @@
     <li class="breadcrumb-item" *ngIf="breadcumList&&breadcumList.length>0"><a (click)="backToPreviousBreadcum(9999)" class="breadcrumb-text">Home</a></li>
     <ng-container *ngIf="breadcumList&&breadcumList.length>0">
         <ng-container *ngFor="let breadcrumb of breadcumList; let i = index">
-            <li class="breadcrumb-item" *ngIf="i!=breadcumList.length-1"><a class="breadcrumb-text" (click)="backToPreviousBreadcum(i)">{{breadcrumb.label}}</a></li>
-            <li class="breadcrumb-item" *ngIf="i===breadcumList.length-1"><a>{{breadcrumb.label}}</a></li>
+            <ng-container *ngIf="i>breadcumList.length-3">
+                <li class="breadcrumb-item" *ngIf="i!=breadcumList.length-1"><a class="breadcrumb-text" (click)="backToPreviousBreadcum(i)">{{breadcrumb.label}}</a></li>
+                <li class="breadcrumb-item" *ngIf="i===breadcumList.length-1"><a>{{breadcrumb.label}}</a></li>
+            </ng-container>
         </ng-container>
     </ng-container>
 </ol>
