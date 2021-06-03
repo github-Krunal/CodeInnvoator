@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'project-information', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'login', loadChildren: () => import('./component/account/login/login.module').then((login) => login.LoginModule),
     data: { breadcrumb: 'login' },
@@ -13,7 +13,11 @@ const routes: Routes = [
   },
   {
     path: 'project-information', loadChildren: () => import('./component/codeInnvoator/project-information/project-information.module').then((project) => project.ProjectInformationModule),
-      data: { breadcrumb: 'Home' },
+    data: { breadcrumb: 'project information' },
+  }, {
+    path: 'home',
+    loadChildren: () => import('./component/codeInnvoator/home-page/home-page.module').then((home) => home.HomePageModule),
+    data: { breadcrumb: 'Home' },
   }
 ];
 

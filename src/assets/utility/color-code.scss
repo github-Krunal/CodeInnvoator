@@ -1,9 +1,18 @@
-$primary-color: #28527a;
+$primary-color: #28527a; //in use
 $secondary-color: #e7f1e0;
 $tertiary-color: #e8eae6;
 $fourth-color: #cdd0cb;
 $anchor-link-color: #6e9bcc;
 $default-text-color: #464343;
 $white-color: #ffffff;
-
+$faint-color-grey: #8080800d; //in use
+$mat-chip-color: #dddddd;
 $theme-color: $primary-color;
+// color-classes
+.color-grey {
+    color: $faint-color-grey;
+}
+
+.bg-color-grey {
+    background: $faint-color-grey;
+}

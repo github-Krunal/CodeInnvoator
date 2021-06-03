@@ -1,44 +1,41 @@
 @import "color-code.scss";
-
+@import "predefined-classes.scss";
 // flex
 @mixin flex($justify-content, $align-items, $gap: 0) {
-	display: flex;
-	justify-content: $justify-content;
-	align-items: $align-items;
-	gap: $gap + px;
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap + px;
 }
 
 // generate images
 @mixin project-image($size: 40, $background-color: $theme-color) {
-	width: $size + px;
-	height: $size + px;
-	border-radius: 50%;
-	object-fit: cover;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: $background-color;
-	color: $white-color;
+    width: $size + px;
+    height: $size + px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: $background-color;
+    color: $white-color;
 }
+
 // clamp line
 @mixin line-clamp($clamp-line) {
-	display: -webkit-box;
-	-webkit-line-clamp: $clamp-line;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $clamp-line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 // custom radio button
-
 @mixin custom-angular-radio-size($size: 30) {
-	.mat-radio-container,
-	.mat-radio-outer-circle,
-	.mat-radio-inner-circle {
-		height: $size + px;
-		width: $size + px;
-	}
-	.mat-radio-button .mat-radio-ripple {
-		height: 0;
-		width: 0;
-	}
+    .mat-radio-container,
+    .mat-radio-outer-circle,
+    .mat-radio-inner-circle {
+        height: $size + px;
+        width: $size + px;
+    }
+    .mat-radio-button .mat-radio-ripple {
+        height: 0;
+        width: 0;
+    }
 }

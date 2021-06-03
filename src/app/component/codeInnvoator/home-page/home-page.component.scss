@@ -1,0 +1,23 @@
+@import "../../../../assets/utility/utility.scss";
+app-home-page {
+    $image-size: 80;
+    .cards {
+        @include flex(center, "", 15);
+        flex-wrap: wrap;
+    }
+    .home-card-item {
+        flex-basis: 280px;
+        @include responsiveDefault(320, 600) {
+            flex-grow: 1;
+        }
+    }
+    .home-section-chip {
+        height: 25px;
+    }
+    .home-section-img {
+        height: $image-size + px;
+        img {
+            @include project-image($image-size);
+        }
+    }
+}

@@ -1,26 +1,42 @@
+@import "../utility/font-family.scss";
 @import "../utility/font-size.scss";
+.title-common {
+    font-weight: $font-weight-xl;
+    font-family: $font-family-secondary;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
 
 // card Title size
 .title-lg {
-	font-size: $font-size-lg;
-	font-weight: $font-weight-xl;
+    font-size: $font-size-lg;
+    @extend .title-common;
 }
+
 .title-xl {
-	font-size: $font-size-xl;
-	font-weight: $font-weight-xl;
+    font-size: $font-size-xl;
+    @extend .title-common;
 }
+
 .title-xxl {
-	font-size: $font-size-xxl;
-	font-weight: $font-weight-xl;
+    font-size: $font-size-xxl;
+    @extend .title-common;
 }
 
 //align vertical and Horizontal center
 .flex-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .custom-carousel-radio {
-	padding: 0 5px 0 0;
-	margin: 0;
+    padding: 0 5px 0 0;
+    margin: 0;
+}
+
+.custom-mat-chip {
+    padding: 3px 10px;
+    border-radius: 16px;
+    background: $mat-chip-color;
 }
