@@ -1,19 +1,43 @@
 <div class="container-fluid mt-4 mb-4">
     <div class="row ">
         <div class="col-md-12 p-5 bg-color-grey">
-            <p class="title-lg text-center ">Explore NearBy</p>
-            <p class="text-center text-muted">10,789 beautiful places to go</p>
-            <div class="mt-5">
+            <p class="title-lg text-center ">Explore Apps</p>
+            <p class="text-center text-muted">10 beautiful Apps to use</p>
+            <div class="mt-4">
                 <div class="cards">
-                    <mat-card class="home-card-item">
+                    <mat-card class="home-card-item flex-center" *ngFor="let item of appIcon">
                         <div class="home-section-chip">
-                            <span class="custom-mat-chip">
-                                1024
+                            <span class="custom-mat-chip" *ngIf="item.Id">
+                                <!-- 1024 -->
+                                {{item.Id}}
                             </span>
                         </div>
-                        <div class="flex-center home-section-img">
-                            <img src="../../../../assets/images/pg (2).jpg">
+                        <div class="flex-center home-section-img" *ngIf="!item.CommingSoon">
+                            <!-- <img src="../../../../assets/images/pg (2).jpg"> -->
+                            <img [src]="item.ImageUrl" *ngIf="item.ImageUrl">
+                            <img src="../../../../assets/images/image-coming-soon.jpg" *ngIf="!item.ImageUrl">
                         </div>
+                        <div class="flex-center home-section-comming" *ngIf="item.CommingSoon">
+                            <!-- <img src="../../../../assets/images/pg (2).jpg"> -->
+                            <img src="../../../../assets/images/comming_soon.jpg" alt="">
+                        </div>
+                        <div class="home-section-name mt-3 ">
+                            <p class="text-center text-capitalize title-sm">
+                                <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere corrupti  -->
+                                <ng-container *ngIf="!item.CommingSoon">
+                                    {{item.Name}}
+                                </ng-container>
+                                <ng-container *ngIf="item.CommingSoon">
+                                    Comming Soon
+                                </ng-container>
+
+                            </p>
+                        </div>
+                        <p class="text-center text-muted title-xs">
+                            <!-- 2 days ago -->
+                            {{item.Time}}
+                        </p>
+
                     </mat-card>
                 </div>
             </div>

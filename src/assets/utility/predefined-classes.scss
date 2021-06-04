@@ -1,26 +1,39 @@
 @import "../utility/font-family.scss";
 @import "../utility/font-size.scss";
-.title-common {
+.commom-title {
     font-weight: $font-weight-xl;
-    font-family: $font-family-secondary;
-    letter-spacing: 1.5px;
-    margin: 0;
+    margin-bottom: 0;
 }
 
 // card Title size
+.title-xs {
+    font-size: $font-size-xs;
+    @extend .commom-title;
+}
+
+.title-sm {
+    font-size: $font-size-sm;
+    @extend .commom-title;
+}
+
+.title-md {
+    font-size: $font-size-md;
+    @extend .commom-title;
+}
+
 .title-lg {
     font-size: $font-size-lg;
-    @extend .title-common;
+    @extend .commom-title;
 }
 
 .title-xl {
     font-size: $font-size-xl;
-    @extend .title-common;
+    @extend .commom-title;
 }
 
 .title-xxl {
     font-size: $font-size-xxl;
-    @extend .title-common;
+    @extend .commom-title;
 }
 
 //align vertical and Horizontal center
