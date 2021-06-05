@@ -34,6 +34,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { BreadcumComponent } from 'src/app/component/breadcum/breadcum.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const MaterialComponents = [
@@ -71,21 +72,23 @@ const MaterialComponents = [
   MatSortModule,
   MatPaginatorModule,
   MatDatepickerModule,
-  MatNativeDateModule, 
+  MatNativeDateModule,
   MatRippleModule,
+  ReactiveFormsModule,
+  FormsModule
 ];
 const componentDeclaration = [
   BreadcumComponent
 ]
 @NgModule({
-  declarations:[componentDeclaration],
+  declarations: [componentDeclaration],
   imports: [MaterialComponents],
   exports: [MaterialComponents,
-  componentDeclaration
+    componentDeclaration
   ],
-   schemas: [
+  schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
 })
-export class AngularMaterialModule {}
+export class AngularMaterialModule { }

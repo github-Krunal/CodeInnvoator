@@ -50,12 +50,6 @@ export class HomePageComponent implements OnInit {
       },
       {
         CommingSoon: true
-      },
-      {
-        CommingSoon: true
-      },
-      {
-        CommingSoon: true
       }]
   }
 

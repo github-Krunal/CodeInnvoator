@@ -1,25 +1,103 @@
 @import "~@angular/material/theming";
 @import "color-code.scss";
 @import "font-family.scss";
-
+@import "font-size.scss";
+// angular material textbox sizes
+$angular-textbox-size-sm: 0.4em;
+$angular-textbox-size-md: 0.6em;
+$angular-textbox-size-lg: 0.8em;
+$angular-textbox-size-xl: 1em;
+$angular-textbox-size: $angular-textbox-size-lg;
 // for color contrast
-$mat-custom: (
-	200: $theme-color,
-	contrast: (
-		200: $dark-primary-text,
-	),
-);
-
+$mat-custom: ( 200: $theme-color, contrast: ( 200: $dark-primary-text, ), );
 // for font typography
-$typography-configuration: mat-typography-config(
-	$font-family: $theme-font-family,
-);
-
+$typography-configuration: mat-typography-config( $font-family: $theme-font-family, );
 @include mat-core();
-
 $primary: mat-palette($mat-custom, 200);
 $accent: mat-palette($mat-custom, 200);
 $theme: mat-light-theme($primary, $accent);
-
 @include angular-material-typography($typography-configuration);
 @include angular-material-theme($theme);
+// custom angular control classes
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $theme-color;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.mat-form-field-label-wrapper {
+    top: -1.5em;
+}
+
+input.mat-input-element {
+    transform: translate(0px, -3px);
+    margin-top: -0.0625em;
+}
+
+.mat-form-field-prefix .mat-icon,
+.mat-form-field-suffix .mat-icon {
+    transform: translate(0, -2px);
+}
+
+.mat-error {
+    font-size: $font-size-xs;
+}
+
+@mixin angular-form-control($size) {
+    @if ($size==0.4em) {
+        .mat-form-field-flex>.mat-form-field-infix {
+            padding: 0.4em 0px !important;
+        }
+        .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+            transform: translateY(-1.1em) scale(0.75);
+            width: 133.33333%;
+        }
+        .mat-form-field-appearance-outline .mat-form-field-label {
+            top: 28px;
+            margin-top: -0.25em;
+        }
+    }
+    @else if($size==0.6em) {
+        .mat-form-field-flex>.mat-form-field-infix {
+            padding: 0.6em 0px !important;
+        }
+        .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+            transform: translateY(-1.3em) scale(0.75);
+            width: 133.33333%;
+        }
+        .mat-form-field-appearance-outline .mat-form-field-label {
+            top: 30px;
+            margin-top: -0.25em;
+        }
+    }
+    @else if($size==0.8em) {
+        .mat-form-field-flex>.mat-form-field-infix {
+            padding: 0.8em 0px !important;
+        }
+        .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+            transform: translateY(-1.4em) scale(0.75);
+            width: 133.33333%;
+        }
+        .mat-form-field-appearance-outline .mat-form-field-label {
+            top: 32px;
+            margin-top: -0.25em;
+        }
+    }
+    @else if($size==1em) {
+        .mat-form-field-flex>.mat-form-field-infix {
+            padding: 1em 0px !important;
+        }
+        .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+            transform: translateY(-1.5em) scale(0.75);
+            width: 133.33333%;
+        }
+        .mat-form-field-appearance-outline .mat-form-field-label {
+            top: 34px;
+            margin-top: -0.25em;
+        }
+    }
+}
+
+@include angular-form-control($angular-textbox-size);

@@ -1,49 +1,47 @@
 @import "font-size.scss";
 @import "color-code.scss";
-
 $textbox-size-xs: 28px;
 $textbox-size-sm: 32px;
 $textbox-size-md: 36px;
 $textbox-size-lg: 40px;
 $textbox-size-xl: 44px;
 $textbox-size-xxl: 48px;
-
 // custom form-control css
 @mixin form-control-size($font-size, $textbox-size, $form-group-margin-bottom) {
-	.custom-form-group {
-		margin-bottom: $form-group-margin-bottom + px;
-	}
-	.custom-form-label {
-		font-size: $font-size + px;
-		color: $default-text-color;
-		font-weight: $font-weight-xl;
-	}
-	.custom-form-control {
-		height: $textbox-size;
-		font-size: $font-size + px;
-	}
+    .custom-form-group {
+        margin-bottom: $form-group-margin-bottom + px;
+    }
+    .custom-form-label {
+        font-size: $font-size + px;
+        color: $default-text-color;
+        font-weight: $font-weight-xl;
+    }
+    .custom-form-control {
+        height: $textbox-size;
+        font-size: $font-size + px;
+    }
 }
 
 // textbox size condition
 @mixin enterTextboxSize($theme-textbox-size) {
-	@if ($textbox-size-xxl==$theme-textbox-size) {
-		@include form-control-size(17, $textbox-size-xxl, 18);
-	}
-	@if ($textbox-size-xl==$theme-textbox-size) {
-		@include form-control-size(16, $textbox-size-xl, 16);
-	}
-	@if ($textbox-size-lg==$theme-textbox-size) {
-		@include form-control-size(14, $textbox-size-lg, 18);
-	}
-	@if ($textbox-size-md==$theme-textbox-size) {
-		@include form-control-size(14, $textbox-size-md, 16);
-	}
-	@if ($textbox-size-sm==$theme-textbox-size) {
-		@include form-control-size(13, $textbox-size-sm, 14);
-	}
-	@if ($textbox-size-xs==$theme-textbox-size) {
-		@include form-control-size(12, $textbox-size-xs, 12);
-	}
+    @if ($textbox-size-xxl==$theme-textbox-size) {
+        @include form-control-size(17, $textbox-size-xxl, 18);
+    }
+    @if ($textbox-size-xl==$theme-textbox-size) {
+        @include form-control-size(16, $textbox-size-xl, 16);
+    }
+    @if ($textbox-size-lg==$theme-textbox-size) {
+        @include form-control-size(14, $textbox-size-lg, 18);
+    }
+    @if ($textbox-size-md==$theme-textbox-size) {
+        @include form-control-size(14, $textbox-size-md, 16);
+    }
+    @if ($textbox-size-sm==$theme-textbox-size) {
+        @include form-control-size(13, $textbox-size-sm, 14);
+    }
+    @if ($textbox-size-xs==$theme-textbox-size) {
+        @include form-control-size(12, $textbox-size-xs, 12);
+    }
 }
 
 // define size textbox

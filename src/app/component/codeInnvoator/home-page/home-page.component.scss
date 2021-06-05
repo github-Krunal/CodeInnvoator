@@ -6,6 +6,9 @@ app-home-page {
         @include flex(center, "", 15);
         flex-wrap: wrap;
     }
+    .home-first-col {
+        min-height: calc(100vh - 7vh);
+    }
     .home-card-item {
         flex-basis: 220px;
         height: 190px;
