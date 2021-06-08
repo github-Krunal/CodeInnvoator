@@ -1,0 +1,17 @@
+@import "../../../../assets/utility/mixin.scss";
+@import "../../../../assets/utility/font-size.scss";
+codeInnvoator-menu-content {
+    $logo-size: 40;
+    .logo-main {
+        position: absolute;
+        left: 12px;
+    }
+    .logo-design {
+        @include project-image($logo-size);
+        @include flex(center, center);
+    }
+    .logo-heading {
+        font-size: $font-size-md;
+        font-weight: $font-weight-xl;
+    }
+}

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'sign-up', pathMatch: 'full' },
+  { path: '', redirectTo: 'app-menu', pathMatch: 'full' },
   {
     path: 'login', loadChildren: () => import('./component/account/login/login.module').then((login) => login.LoginModule),
     data: { breadcrumb: 'login' },
@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./component/codeInnvoator/home-page/home-page.module').then((home) => home.HomePageModule),
     data: { breadcrumb: 'Home' },
+  }, {
+    path: 'app-menu',
+    loadChildren: () => import('./component/codeInnvoator/menu/menu.module').then((menu) => menu.MenuModule),
+    data: { breadcrumb: 'App Menu' },
   }
 ];
 

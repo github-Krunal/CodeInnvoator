@@ -1,0 +1,15 @@
+app-menu {
+    mat-sidenav {
+        width: 65px !important;
+        transition: 1s;
+        overflow: hidden;
+    }
+    .mat-drawer-inner-container {
+        padding: 8px;
+        overflow: hidden;
+    }
+    mat-sidenav:hover {
+        transition: 2s;
+        width: 185px !important;
+    }
+}
