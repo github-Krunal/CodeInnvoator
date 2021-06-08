@@ -4,22 +4,22 @@
             <div class="w-100">
                 <!-- header -->
                 <div class="title-xl text-center mb-4">Login In</div>
-
                 <!-- input control -->
-                <div class="custom-form-group">
+                <div class="ng-custom-form-group">
                     <mat-form-field appearance="outline">
-                        <mat-label>Outline form field</mat-label>
-                        <input matInput placeholder="Placeholder" [formControl]="email" required>
-                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                        <mat-label>User Name</mat-label>
+                        <input matInput placeholder="">
+                        <mat-error></mat-error>
                     </mat-form-field>
                     <!-- <input type="text" class="form-control custom-form-control" id="Username" placeholder="Username"> -->
                 </div>
-                <div class="custom-form-group">
+                <div class="ng-custom-form-group">
                     <mat-form-field appearance="outline">
-                        <mat-label>Outline form field</mat-label>
-                        <input matInput placeholder="Placeholder">
-                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-label>Enter Your Password</mat-label>
+                        <input matInput placeholder="Placeholder" [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
                     </mat-form-field>
                     <!-- <input type="Password" class="form-control custom-form-control" id="Password" placeholder="Password"> -->
                 </div>
@@ -34,12 +34,11 @@
 
                 <!-- sign in button -->
                 <div class="d-grid gap-2 mb-4 ">
-                    <button class="btn btn-primary shadow" type="button">Sign In</button>
+                    <button class="btn btn-primary shadow btn-lg" type="button" [routerLink]="['/home']">Sign In</button>
                 </div>
-
                 <!-- link for new account -->
                 <div class="text-center">
-                    Not a member ? <a class="btn-link" href="">Create Account</a>
+                    Not a member ? <a class="btn-link" [routerLink]="['/sign-up']">Create Account</a>
                 </div>
             </div>
         </div>

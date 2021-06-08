@@ -1,35 +1,38 @@
-<div class="flex-center login-form">
-    <mat-card class="login-form-card">
-        <div class=" flex-center h-100">
-            <div class="w-100">
-                <!-- header -->
-                <div class="title-xl text-center mb-4">Create an Account</div>
+<div class="flex-center sign-form-main mt-3 ">
+    <mat-card class="sign-form-design p-4">
+        <p class="title-lg text-center ">Welcome To CodeInnvoator</p>
+        <p class="text-center text-muted">Register your account</p>
+        <!-- input control -->
+        <div class="ng-custom-form-group">
+            <mat-form-field appearance="outline">
+                <mat-label>UserName</mat-label>
+                <input matInput placeholder="">
+                <mat-error></mat-error>
+            </mat-form-field>
+        </div>
+        <div class="ng-custom-form-group">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="">
+                <mat-error></mat-error>
+            </mat-form-field>
+        </div>
+        <div class="ng-custom-form-group">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Your Password</mat-label>
+                <input matInput placeholder="Placeholder" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <!-- <input type="Password" class="form-control custom-form-control" id="Password" placeholder="Password"> -->
+        </div>
 
-                <!-- input control -->
-                <div class="custom-form-group">
-                    <input type="text" class="form-control custom-form-control" id="firstName" placeholder="First Name">
-                </div>
-                <div class="custom-form-group">
-                    <input type="text" class="form-control custom-form-control" id="lastName" placeholder="Last Name">
-                </div>
-                <div class="custom-form-group">
-                    <input type="text" class="form-control custom-form-control" id="email" placeholder="Email">
-                </div>
-                <div class="custom-form-group">
-                    <input type="password" class="form-control custom-form-control" id="password" placeholder="Password">
-                </div>
-
-
-                <!-- sign up button -->
-                <div class="d-grid gap-2 mb-4 ">
-                    <button class="btn btn-primary shadow ">Sign Up</button>
-                </div>
-
-                <!-- link for new account -->
-                <div class="text-center">
-                    Already have an account ? <a class="btn-link" href="">Login</a>
-                </div>
-            </div>
+        <div class="d-grid gap-2 mb-3">
+            <button class="btn btn-primary btn-lg" type="button">Sign Up</button>
+        </div>
+        <div class="text-center mb-3">
+            Already have an account ? <a [routerLink]="['/login']">Login</a>
         </div>
     </mat-card>
 </div>

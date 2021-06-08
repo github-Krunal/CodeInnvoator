@@ -45,6 +45,19 @@ input.mat-input-element {
     font-size: $font-size-xs;
 }
 
+.ng-custom-form-group {
+    margin-bottom: 0px;
+}
+
+.mat-form-field-invalid {
+    .mat-icon {
+        color: $mat-error-color;
+    }
+    .mat-input-element::-webkit-input-placeholder {
+        color: $mat-error-color;
+    }
+}
+
 @mixin angular-form-control($size) {
     @if ($size==0.4em) {
         .mat-form-field-flex>.mat-form-field-infix {

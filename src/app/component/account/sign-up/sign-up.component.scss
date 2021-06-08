@@ -1,0 +1,15 @@
+@import "../../../../assets/utility/mixin.scss";
+@import "../../../../assets/utility/custom-angular.scss";
+app-sign-up {
+    @mixin sign-width-height($width, $height) {
+        width: $width;
+        height: $height;
+    }
+    // sign up form design
+    .sign-form-main {
+        @include sign-width-height(100%, 100vh);
+    }
+    .sign-form-design {
+        width: 400px;
+    }
+}
