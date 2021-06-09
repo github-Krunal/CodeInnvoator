@@ -5,3 +5,7 @@ export class AppIcon {
 	public Time?: string;
 	public CommingSoon?: boolean;
 }
+export class SideMenu {
+	public IconName?: string;
+	public SubmenuName?: string;
+}
