@@ -17,23 +17,35 @@ export class MenuContentComponent implements OnInit {
   private getSubMenuList() {
     this.sideBarMenuList = [{
       IconName: 'home',
-      SubmenuName: 'Dashboard'
+      SubmenuName: 'Dashboard',
+      ToolTip: 'Dashboard',
+      RouterLink: 'login'
     },
     {
       IconName: 'workspace_premium',
-      SubmenuName: 'Project'
+      SubmenuName: 'Project',
+      ToolTip: 'Project',
+      RouterLink: 'Dashboard'
     }, {
       IconName: 'task',
-      SubmenuName: 'My Task'
+      SubmenuName: 'My Task',
+      ToolTip: 'My Task',
+      RouterLink: 'Dashboard'
     }, {
       IconName: 'groups',
-      SubmenuName: 'Member'
+      SubmenuName: 'Member',
+      ToolTip: 'Member List',
+      RouterLink: 'Dashboard'
     }, {
       IconName: 'event',
-      SubmenuName: 'Calender'
+      SubmenuName: 'Calender',
+      ToolTip: 'Calender',
+      RouterLink: 'Dashboard'
     }, {
       IconName: 'settings',
-      SubmenuName: 'Setting'
+      SubmenuName: 'Setting',
+      ToolTip: 'Setting',
+      RouterLink: 'Dashboard'
     }]
   }
 }

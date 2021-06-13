@@ -15,7 +15,7 @@ codeInnvoator-menu-content {
         display: flex;
         width: max-content;
         .logo-icon {
-            @include project-image($logo-size);
+            @include project-image($logo-size, $faint-primary-color);
             @include flex(center, center);
         }
         .logo-name {
@@ -36,5 +36,8 @@ codeInnvoator-menu-content {
     .icon-name {
         font-size: $font-size-sm;
         font-weight: $font-weight-xl;
+    }
+    .menu-toggle-button {
+        margin-left: -5px;
     }
 }

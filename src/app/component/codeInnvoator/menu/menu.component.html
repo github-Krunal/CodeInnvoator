@@ -1,10 +1,12 @@
 <mat-sidenav-container class='app-drawer-container' fullscreen>
-    <mat-sidenav #sidenav [mode]="isHandset ? 'over' : 'side'" opened>
+    <mat-sidenav #sidenav [mode]="isHandset ? 'over' : 'side'" [opened]="isToogle" class="menu-mat-sidenav">
+        <!-- [mode]="isHandset ? 'over' : 'side'" -->
         <codeInnvoator-menu-content></codeInnvoator-menu-content>
     </mat-sidenav>
     <mat-sidenav-content id="side-nav-id">
-        <div class="pl-3 pr-3 mt-3">
-
+        <codeInnvoator-header (toggleSideNav)='displaySideNav($event)'></codeInnvoator-header>
+        <div class="menu-router-content mt-3">
+            <router-outlet name="side"></router-outlet>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

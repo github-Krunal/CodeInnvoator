@@ -1,0 +1,16 @@
+@import "../../../../assets/utility/utility.scss";
+codeInnvoator-header {
+    .example-spacer {
+        flex: 1 1 auto;
+    }
+    .header-company-name {
+        color: $white-color;
+    }
+    .mat-toolbar-single-row {
+        padding: 0 10px;
+    }
+    .header-mat-toolbar {
+        position: sticky;
+        top: 0;
+    }
+}

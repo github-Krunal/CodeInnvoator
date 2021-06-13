@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './component/account/login/login.component';
+import { DashboardComponent } from './component/content/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'app-menu', pathMatch: 'full' },

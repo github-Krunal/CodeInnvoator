@@ -8,4 +8,6 @@ export class AppIcon {
 export class SideMenu {
 	public IconName?: string;
 	public SubmenuName?: string;
+	public ToolTip?: string;
+	public RouterLink?: string;
 }

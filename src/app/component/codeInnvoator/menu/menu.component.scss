@@ -1,15 +1,17 @@
+@import "../../../../assets/utility/utility.scss";
 app-menu {
     mat-sidenav {
         width: 65px !important;
-        transition: 1s;
         overflow: hidden;
     }
     .mat-drawer-inner-container {
         padding: 8px;
         overflow: hidden;
     }
-    mat-sidenav:hover {
-        transition: 2s;
-        width: 200px !important;
+    .menu-mat-sidenav {
+        background: $theme-color;
+    }
+    .menu-router-content {
+        padding: 0 20px;
     }
 }

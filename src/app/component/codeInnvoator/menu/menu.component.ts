@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { HeaderComponent } from '../header/header.component';
 
 
 @Component({
@@ -10,13 +11,11 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class MenuComponent implements OnInit {
   public isHandset: boolean = true;
-  public isToogle: boolean = false;
-  @ViewChild('sidenav', { static: false }) public sidenav!: MatSidenav;
+  public isToogle: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
     this.configureSideNav();
-
   }
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -24,5 +23,8 @@ export class MenuComponent implements OnInit {
   }
   configureSideNav() {
     this.isHandset = window.innerWidth < 1000 ? true : false;
+  }
+  public displaySideNav(event: boolean) {
+    this.isToogle = event;
   }
 }
