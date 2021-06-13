@@ -48,4 +48,7 @@ export class MenuContentComponent implements OnInit {
       RouterLink: 'Dashboard'
     }]
   }
+  abc() {
+    debugger
+  }
 }

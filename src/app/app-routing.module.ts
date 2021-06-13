@@ -4,7 +4,7 @@ import { LoginComponent } from './component/account/login/login.component';
 import { DashboardComponent } from './component/content/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'app-menu', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'login', loadChildren: () => import('./component/account/login/login.module').then((login) => login.LoginModule),
     data: { breadcrumb: 'login' },
@@ -20,13 +20,13 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./component/codeInnvoator/home-page/home-page.module').then((home) => home.HomePageModule),
     data: { breadcrumb: 'Home' },
-  }, {
-    path: 'app-menu',
-    loadChildren: () => import('./component/codeInnvoator/menu/menu.module').then((menu) => menu.MenuModule),
-    data: { breadcrumb: 'App Menu' },
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./component/content/dashboard/dashboard.module').then((dash) => dash.DashboardModule),
+    data: { breadcrumb: 'Dashboard' },
   }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

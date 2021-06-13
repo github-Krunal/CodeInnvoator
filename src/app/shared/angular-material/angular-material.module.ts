@@ -35,6 +35,9 @@ import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { BreadcumComponent } from 'src/app/component/breadcum/breadcum.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from 'src/app/component/codeInnvoator/header/header.component';
+import { MenuContentComponent } from 'src/app/component/codeInnvoator/menu-content/menu-content.component';
+import { RouterModule } from '@angular/router';
 
 
 const MaterialComponents = [
@@ -75,10 +78,13 @@ const MaterialComponents = [
   MatNativeDateModule,
   MatRippleModule,
   ReactiveFormsModule,
-  FormsModule
+  FormsModule,
+  RouterModule
 ];
 const componentDeclaration = [
-  BreadcumComponent
+  BreadcumComponent,
+  HeaderComponent,
+  MenuContentComponent
 ]
 @NgModule({
   declarations: [componentDeclaration],
