@@ -26,16 +26,15 @@ codeInnvoator-menu-content {
     .sub-menu-list {
         width: max-content;
         @extend .main-subMenu-item;
-    }
-    .icon-name {
-        margin-left: 30px;
+        & a {
+            text-decoration: none;
+            &:hover {
+                color: $link-hover-color;
+            }
+        }
     }
     .footer {
         @extend .main-subMenu-item;
-    }
-    .icon-name {
-        font-size: $font-size-sm;
-        font-weight: $font-weight-xl;
     }
     .menu-toggle-button {
         margin-left: -5px;

@@ -24,8 +24,9 @@ export class AppComponent {
       }
     })
   }
+  // check url present
   private isUrlPresent(url: string) {
-    let noSideBarUrl = ["/login", "/sign-up"];
+    let noSideBarUrl = ["/login", "/sign-up", "/home"];
     return noSideBarUrl.indexOf(url) > -1 ? false : true;
   }
   @HostListener('window:resize', ['$event'])

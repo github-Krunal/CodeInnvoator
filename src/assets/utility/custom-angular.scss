@@ -68,6 +68,11 @@ input.mat-input-element {
     background: $faint-primary-color;
 }
 
+// mat badge color
+.mat-badge-warn .mat-badge-content {
+    background: $faint-primary-color;
+}
+
 @mixin angular-form-control($size) {
     @if ($size==0.4em) {
         .mat-form-field-flex>.mat-form-field-infix {
