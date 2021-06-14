@@ -20,7 +20,7 @@
 }
 
 // clamp line
-@mixin line-clamp($clamp-line) {
+@mixin line-clamp($clamp-line: 2) {
     display: -webkit-box;
     -webkit-line-clamp: $clamp-line;
     -webkit-box-orient: vertical;

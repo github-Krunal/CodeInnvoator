@@ -1,0 +1,33 @@
+@import "../../../../../assets/utility/mixin.scss";
+@import "../../../../../assets/utility/font-size.scss";
+kanban-board {
+    $spacing: 5px;
+    .kanban-card {
+        width: 170px;
+        & .mat-card {
+            padding: $spacing;
+        }
+    }
+    .kanban-top-row {
+        @include flex(space-between, "");
+    }
+    .kanban-description {
+        margin-top: $spacing;
+        @include line-clamp(3);
+    }
+    .kanban-assign-attachment {
+        margin-top: $spacing;
+        @include flex(space-between, "");
+        .assign-icons {
+            @include flex("", center);
+            .material-icons {
+                padding-right: 2px;
+                font-size: $font-size-sm;
+            }
+            .icons-display {
+                @include flex("", center);
+                margin-left: 2px;
+            }
+        }
+    }
+}

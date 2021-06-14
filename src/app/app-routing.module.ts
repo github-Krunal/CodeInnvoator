@@ -4,7 +4,7 @@ import { LoginComponent } from './component/account/login/login.component';
 import { DashboardComponent } from './component/content/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'task', pathMatch: 'full' },
   {
     path: 'login', loadChildren: () => import('./component/account/login/login.module').then((login) => login.LoginModule),
     data: { breadcrumb: 'login' },
@@ -25,6 +25,34 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('./component/content/dashboard/dashboard.module').then((dash) => dash.DashboardModule),
     data: { breadcrumb: 'Dashboard' },
+  },
+  {
+    path: 'task',
+    loadChildren: () => import('./component/content/task/task.module').then((task) => task.TaskModule),
+    data: { breadcrumb: 'task' },
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    path: '**',
+    loadChildren: () => import('./component/codeInnvoator/page-not-found/page-not-found.module').then((notFound) => notFound.PageNotFoundModule),
+    data: { breadcrumb: 'Page Not Found' },
   }
 ];
 @NgModule({
