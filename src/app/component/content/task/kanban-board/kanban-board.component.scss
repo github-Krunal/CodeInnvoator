@@ -3,7 +3,7 @@
 kanban-board {
     $spacing: 5px;
     .kanban-card {
-        width: 170px;
+        width: 200px;
         & .mat-card {
             padding: $spacing;
         }
@@ -13,6 +13,7 @@ kanban-board {
     }
     .kanban-description {
         margin-top: $spacing;
+        line-height: 18px;
         @include line-clamp(3);
     }
     .kanban-assign-attachment {
@@ -27,6 +28,28 @@ kanban-board {
             .icons-display {
                 @include flex("", center);
                 margin-left: 2px;
+            }
+        }
+    }
+    .kanaban-assignto-image {
+        img {
+            margin-right: 2px;
+            @include project-image(20);
+        }
+    }
+    .kanban-progessbar {
+        margin-top: $spacing;
+        .progress-bar-header {
+            @include flex(space-between, "");
+        }
+        .progrss-bar {
+            background: $faint-color-grey;
+            padding: 1px;
+            box-sizing: border-box;
+            border-radius: 6px;
+            .percentage-progress {
+                height: 2px;
+                background: $theme-color;
             }
         }
     }
