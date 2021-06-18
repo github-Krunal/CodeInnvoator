@@ -19,33 +19,13 @@ export class MenuContentComponent implements OnInit {
       IconName: 'home',
       SubmenuName: 'Dashboard',
       ToolTip: 'Dashboard',
-      RouterLink: 'home'
+      RouterLink: 'dashboard'
     },
     {
       IconName: 'workspace_premium',
-      SubmenuName: 'Project',
-      ToolTip: 'Project',
-      RouterLink: 'dashboard'
-    }, {
-      IconName: 'task',
-      SubmenuName: 'My Task',
-      ToolTip: 'My Task',
-      RouterLink: 'dashboard'
-    }, {
-      IconName: 'groups',
-      SubmenuName: 'Member',
-      ToolTip: 'Member List',
-      RouterLink: 'dashboard'
-    }, {
-      IconName: 'event',
-      SubmenuName: 'Calender',
-      ToolTip: 'Calender',
-      RouterLink: 'dashboard'
-    }, {
-      IconName: 'settings',
-      SubmenuName: 'Setting',
-      ToolTip: 'Setting',
-      RouterLink: 'home'
+      SubmenuName: 'Project Status',
+      ToolTip: 'Project Status',
+      RouterLink: 'project-status'
     }]
   }
 

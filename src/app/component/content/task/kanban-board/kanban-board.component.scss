@@ -1,7 +1,7 @@
 @import "../../../../../assets/utility/mixin.scss";
 @import "../../../../../assets/utility/font-size.scss";
 kanban-board {
-    $spacing: 5px;
+    $spacing: 10px;
     .kanban-card {
         width: 200px;
         & .mat-card {

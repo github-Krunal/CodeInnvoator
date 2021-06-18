@@ -31,6 +31,11 @@ const routes: Routes = [
     loadChildren: () => import('./component/content/task/task.module').then((task) => task.TaskModule),
     data: { breadcrumb: 'task' },
   },
+  {
+    path: 'project-status',
+    loadChildren: () => import('./component/content/project-status/project-status.module').then((status) => status.ProjectStatusModule),
+    data: { breadcrumb: 'Project Status' },
+  },
 
 
 
