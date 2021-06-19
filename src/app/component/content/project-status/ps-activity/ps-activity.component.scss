@@ -1,0 +1,12 @@
+@import "../../../../../assets/utility/mixin.scss";
+.ps-list-activity {
+    @include flex(space-between, center, 15);
+}
+
+.text-color {
+    color: $mat-chip-color;
+}
+
+img {
+    @include project-image(40);
+}

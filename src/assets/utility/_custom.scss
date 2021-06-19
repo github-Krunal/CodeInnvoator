@@ -1,4 +1,6 @@
 @import "../utility/color-code.scss";
-$theme-colors: (
-	"primary": $theme-color,
-);
+$theme-colors: ( "primary": $theme-color, );
+// list bootstap
+$list-group-bg: $theme-color;
+$list-group-border-color: $fourth-color;
+$list-group-color: $white-color;

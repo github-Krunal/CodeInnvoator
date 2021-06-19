@@ -1,45 +1,50 @@
 @import "color-code.scss";
-
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:disabled:hover .btn-primary:active:hover {
-	color: $white-color;
+    color: $white-color;
 }
+
 .btn-outline-primary,
 .btn-outline-primary:hover,
 .btn-outline-primary:active,
 .btn-outline-primary:focus,
 .btn-outline-primary:disabled:hover .btn-outline-primary:active:hover {
-	color: $theme-color;
-	background: $white-color;
+    color: $theme-color;
+    background: $white-color;
 }
+
 .btn:focus,
 .btn:active {
-	outline: none !important;
-	box-shadow: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
+
 .container-fluid {
-	padding: 0 2rem;
+    padding: 0 2rem;
 }
 
 .btn-link {
-	height: 0;
-	padding: 0;
-	color: $anchor-link-color;
+    height: 0;
+    padding: 0;
+    color: $anchor-link-color;
 }
+
 .form-control:focus {
-	border-color: $primary-color;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 2px $primary-color;
-	outline: 0 none;
+    border-color: $primary-color;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 2px $primary-color;
+    outline: 0 none;
 }
+
 .mat-icon {
-	color: $theme-color;
+    color: $theme-color;
 }
+
 // custom radio button color
 .form-check-input:checked {
-	background-color: $primary-color;
-	border-color: $primary-color;
-	box-shadow: none;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    box-shadow: none;
 }
