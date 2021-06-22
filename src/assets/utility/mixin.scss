@@ -16,7 +16,8 @@
     object-fit: cover;
     background: $background-color;
     color: $white-color;
-    border: 1px solid $theme-color;
+    border: 1px solid $background-color;
+    @content;
 }
 
 // clamp line
@@ -24,6 +25,7 @@
     display: -webkit-box;
     -webkit-line-clamp: $clamp-line;
     -webkit-box-orient: vertical;
+    word-break: break-all;
     overflow: hidden;
 }
 

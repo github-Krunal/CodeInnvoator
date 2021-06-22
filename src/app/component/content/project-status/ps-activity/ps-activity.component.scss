@@ -1,6 +1,11 @@
 @import "../../../../../assets/utility/mixin.scss";
-.ps-list-activity {
+.ps-list-activity,
+.ps-actvity-header {
     @include flex(space-between, center, 15);
+}
+
+.ps-actvity-header {
+    height: 50px;
 }
 
 .text-color {
@@ -8,5 +13,48 @@
 }
 
 img {
-    @include project-image(40);
+    @include project-image(55) {
+        border: 3px solid $faint-primary-color;
+    }
+}
+
+.ps-activity-group {
+    overflow-y: auto;
+    max-height: 230px;
+}
+
+.ps-activity-by {
+    width: 40%;
+}
+
+.ps-status {
+    width: 40%;
+    .status-desc {
+        position: relative;
+        @include line-clamp(1);
+        padding-left: 13px;
+    }
+    .status-desc::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: red;
+        top: 5px;
+        left: 0;
+    }
+}
+
+.ps-activity-group::-webkit-scrollbar {
+    width: 9px;
+}
+
+.ps-activity-group::-webkit-scrollbar-track {
+    background: $theme-color;
+}
+
+.ps-activity-group::-webkit-scrollbar-thumb {
+    background-color: $fourth-color;
+    border-radius: 20px;
+    border: 3px solid $theme-color;
 }

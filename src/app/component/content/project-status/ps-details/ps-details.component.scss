@@ -2,7 +2,7 @@
 @import "../../../../../assets/utility/font-size.scss";
 @import "../../../../../assets/utility/media-query.scss";
 ps-details {
-    $circular-progress: 130;
+    $circular-progress: 120;
     $circular-progress-size: $circular-progress + px;
     .progress-spinner-common {
         height: $circular-progress-size !important;
