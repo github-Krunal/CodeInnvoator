@@ -4,18 +4,23 @@
 <!-- if side Navigation bar present -->
 <ng-template #SideNavContainer>
     <mat-sidenav-container class='app-drawer-container' fullscreen>
-        <mat-sidenav #sidenav [mode]="isHandset ? 'over' : 'side'" [opened]="isToogle" class="menu-mat-sidenav">
+        <mat-sidenav #sidenav [mode]="isHandset ? 'over' : 'over'" class="menu-mat-sidenav">
             <codeInnvoator-menu-content></codeInnvoator-menu-content>
         </mat-sidenav>
         <mat-sidenav-content id="side-nav-id">
-            <codeInnvoator-header (toggleSideNav)='displaySideNav($event)'></codeInnvoator-header>
+            <codeInnvoator-header>
+                <button mat-icon-button>
+                    <span class="material-icons" (click)="sidenav.toggle()">
+                        menu
+                    </span>
+                </button>
+            </codeInnvoator-header>
             <div class="menu-router-content mt-3">
                 <router-outlet></router-outlet>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </ng-template>
-
 <!-- if side Navigation bar not present -->
 <ng-template #noSideNavContainer>
     <router-outlet></router-outlet>

@@ -1,17 +1,13 @@
 <p class="header-mat-toolbar">
     <mat-toolbar color="primary">
-        <button mat-icon-button (click)="toggleSideBar()">
-			<span class="material-icons">
-				menu
-			</span>
-		</button>
+        <ng-content></ng-content>
         <span class="header-company-name title-lg">CodeInnvoator</span>
         <span class="example-spacer"></span>
         <button mat-icon-button>
-			<span class="material-icons" matBadge="15" matBadgeColor="warn">
-				home
-			</span>
-		</button>
+            <span class="material-icons" matBadge="15" matBadgeColor="warn">
+                home
+            </span>
+        </button>
         <div class="ms-4 header-login-profile">
             <img src="../../../../assets/images//pg (2).jpg">
         </div>

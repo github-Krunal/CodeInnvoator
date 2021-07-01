@@ -12,10 +12,13 @@ export class PsDetailsComponent implements OnInit {
   mode: ProgressSpinnerMode = 'determinate';
   PROGRESS_SPINNER_VALUE: number = 70;
   color: ThemePalette = 'primary';
+
   public abc: string[] = ["1", "1", "1", "1", "1"]
   constructor() { }
-
   ngOnInit(): void {
   }
-
+  onSwipe(s: any) {
+    debugger
+    console.log();
+  }
 }

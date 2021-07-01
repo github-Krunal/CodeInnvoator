@@ -9,7 +9,6 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class AppComponent {
   public isHandset: boolean = true;
-  public isToogle: boolean = true;
   public isSideBarRouting: boolean = false;
   constructor(private router: Router) {
     this.checkIsSideBarRouting();
@@ -36,7 +35,5 @@ export class AppComponent {
   configureSideNav() {
     this.isHandset = window.innerWidth < 1000 ? true : false;
   }
-  public displaySideNav(event: boolean) {
-    this.isToogle = event;
-  }
+
 }

@@ -39,6 +39,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from 'src/app/component/codeInnvoator/header/header.component';
 import { MenuContentComponent } from 'src/app/component/codeInnvoator/menu-content/menu-content.component';
 import { RouterModule } from '@angular/router';
+import { HammerModule } from '@angular/platform-browser';
 
 
 const MaterialComponents = [
@@ -81,7 +82,9 @@ const MaterialComponents = [
   ReactiveFormsModule,
   FormsModule,
   RouterModule,
-  MatBadgeModule
+  MatBadgeModule,
+  HammerModule
+
 ];
 const componentDeclaration = [
   BreadcumComponent,
