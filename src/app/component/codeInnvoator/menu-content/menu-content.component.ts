@@ -20,7 +20,7 @@ export class MenuContentComponent implements OnInit {
         IconName: 'group',
         SubmenuName: 'Group',
         ToolTip: 'Member Details',
-        RouterLink: 'member-deails'
+        RouterLink: 'member-details'
       },
 
       //   {

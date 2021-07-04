@@ -18,7 +18,6 @@ export class PsDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
   onSwipe(s: any) {
-    debugger
     console.log();
   }
 }

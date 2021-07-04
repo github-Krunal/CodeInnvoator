@@ -1,0 +1,33 @@
+@import "../../../../assets/utility/utility.scss";
+@import "../../../../assets/utility/mixin.scss";
+app-notification {
+    .notification-icons-size {
+        font-size: $font-size-lg;
+        margin-top: 3px;
+    }
+    .alert-snackbar-icon {
+        color: #fa062e;
+    }
+    .success-snackbar-icon {
+        color: #37ee0e;
+    }
+    .info-snackbar-icon {
+        color: #25bee0fc;
+    }
+    .warning-snackbar-icon {
+        color: #f5c529;
+    }
+    .notification-main {
+        @include flex(space-between, center);
+    }
+    #notification-icon {
+        @include flex("", center);
+    }
+    .notification-text {
+        color: $white-color;
+    }
+    .notification-close {
+        color: $white-color;
+        cursor: pointer;
+    }
+}

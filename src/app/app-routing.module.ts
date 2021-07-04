@@ -37,11 +37,16 @@ const routes: Routes = [
     data: { breadcrumb: 'Project Status' },
   },
 
+  {
+    path: 'member-details',
+    loadChildren: () => import('./component/content/member-details/member-details.module').then((member) => member.MemberDetailsModule),
+    data: { breadcrumb: 'Member Details' },
+  },
 
 
 
 
-
+  // (top,  #f21a3e 12 %,#565551 49 %);
 
 
 

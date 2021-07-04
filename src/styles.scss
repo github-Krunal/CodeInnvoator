@@ -22,3 +22,20 @@ body {
 .material-icons {
     color: $white-color;
 }
+
+// custom angular snackbar color
+.snackbar-alert {
+    background-image: linear-gradient(to right, #e01f3fa4 12%, #565551 49%) !important;
+}
+
+.snackbar-success {
+    background-image: linear-gradient(to right, #66bf52d2 12%, #565551 49%) !important;
+}
+
+.snackbar-info {
+    background-image: linear-gradient(to right, #76b8c7ad 12%, #565551 49%) !important;
+}
+
+.snackbar-warning {
+    background-image: linear-gradient(to right, #d1ad37a8 12%, #565551 49%) !important;
+}

@@ -40,6 +40,7 @@ import { HeaderComponent } from 'src/app/component/codeInnvoator/header/header.c
 import { MenuContentComponent } from 'src/app/component/codeInnvoator/menu-content/menu-content.component';
 import { RouterModule } from '@angular/router';
 import { HammerModule } from '@angular/platform-browser';
+import { NotificationComponent } from '../component/notification/notification.component';
 
 
 const MaterialComponents = [
@@ -89,7 +90,8 @@ const MaterialComponents = [
 const componentDeclaration = [
   BreadcumComponent,
   HeaderComponent,
-  MenuContentComponent
+  MenuContentComponent,
+  NotificationComponent
 ]
 @NgModule({
   declarations: [componentDeclaration],
