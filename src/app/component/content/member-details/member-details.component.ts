@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Notificer } from 'src/app/shared/component/notification/notification';
+import { ApiCall } from 'src/app/shared/modal/sample-modal';
+import { ApicallService } from 'src/app/shared/services/apicall.service';
 import { CustomSnackbar } from 'src/app/shared/services/custom-snackbar.service';
 
 @Component({
@@ -8,14 +11,32 @@ import { CustomSnackbar } from 'src/app/shared/services/custom-snackbar.service'
   styleUrls: ['./member-details.component.scss']
 })
 export class MemberDetailsComponent implements OnInit {
-  public Notificer = Notificer;
+  campaignOne: FormGroup;
+  campaignTwo: FormGroup;
+  public sampleData: ApiCall[] = [];
 
-  constructor(private customSnackbar: CustomSnackbar) { }
+  constructor(private ApicallService: ApicallService) {
+    const today = new Date();
+    const month = today.getMonth();
+    const year = today.getFullYear();
+
+    this.campaignOne = new FormGroup({
+      start: new FormControl(new Date(year, month, 13)),
+      end: new FormControl(new Date(year, month, 16))
+    });
+
+    this.campaignTwo = new FormGroup({
+      start: new FormControl(new Date(year, month, 15)),
+      end: new FormControl(new Date(year, month, 19))
+    });
+  }
 
   ngOnInit(): void {
+    this.getApiCall();
   }
-  public getSnackbar(notify: Notificer) {
-    this.customSnackbar.snackBar('Notification !', notify);
+  getApiCall() {
+    this.ApicallService.freeApiMethod().subscribe((api: any) => {
+      this.sampleData = api;
+    })
   }
-
 }

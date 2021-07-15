@@ -7,7 +7,7 @@ $angular-textbox-size-sm: 0.4em;
 $angular-textbox-size-md: 0.6em;
 $angular-textbox-size-lg: 0.8em;
 $angular-textbox-size-xl: 1em;
-$angular-textbox-size: $angular-textbox-size-lg;
+$angular-textbox-size: $angular-textbox-size-sm;
 // for color contrast
 $mat-custom: ( 200: $theme-color, contrast: ( 200: $dark-primary-text, ), );
 // for font typography
@@ -25,10 +25,23 @@ $theme: mat-light-theme($primary, $accent);
 
 .mat-form-field {
     width: 100%;
+    overflow: hidden;
 }
 
 .mat-form-field-label-wrapper {
     top: -1.5em;
+}
+
+.form-label-material {
+    margin-left: 5px;
+}
+
+.mat-date-range {
+    transform: translate(0, -3px);
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin: 0em 0.25em 0;
 }
 
 input.mat-input-element {
@@ -47,6 +60,10 @@ input.mat-input-element {
 
 .ng-custom-form-group {
     margin-bottom: 0px;
+}
+
+.mat-form-field-flex {
+    background: white;
 }
 
 .mat-form-field-invalid {
@@ -86,6 +103,12 @@ input.mat-input-element {
             top: 28px;
             margin-top: -0.25em;
         }
+        .mat-datepicker-toggle-default-icon {
+            font-size: $font-size-xs;
+        }
+        .mat-form-field-suffix {
+            top: 1px !important;
+        }
     }
     @else if($size==0.6em) {
         .mat-form-field-flex>.mat-form-field-infix {
@@ -98,6 +121,12 @@ input.mat-input-element {
         .mat-form-field-appearance-outline .mat-form-field-label {
             top: 30px;
             margin-top: -0.25em;
+        }
+        .mat-datepicker-toggle-default-icon {
+            font-size: $font-size-xs;
+        }
+        .mat-form-field-suffix {
+            top: 1px !important;
         }
     }
     @else if($size==0.8em) {

@@ -4,6 +4,8 @@ import { MemberDetailsComponent } from './member-details.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CustomSnackbar } from 'src/app/shared/services/custom-snackbar.service';
 import { AngularMaterialModule } from 'src/app/shared/angular-material/angular-material.module';
+import { ApicallService } from 'src/app/shared/services/apicall.service';
+import { TabularMemberDetailsComponent } from './tabular-member-details/tabular-member-details.component';
 
 const memberDetails: Routes = [{
   path: '',
@@ -12,13 +14,14 @@ const memberDetails: Routes = [{
 
 @NgModule({
   declarations: [
-    MemberDetailsComponent
+    MemberDetailsComponent,
+    TabularMemberDetailsComponent
   ],
   imports: [
     RouterModule.forChild(memberDetails),
     CommonModule,
     AngularMaterialModule
   ],
-  providers: [CustomSnackbar]
+  providers: [CustomSnackbar, ApicallService]
 })
 export class MemberDetailsModule { }

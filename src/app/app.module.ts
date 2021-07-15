@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './shared/angular-material/angular-material.module';
 import { MyHammerConfigService } from './shared/services/my-hammer-config.service';
+import { HttpClientModule } from '@angular/common/http';
 // making hammer config (3)
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { MyHammerConfigService } from './shared/services/my-hammer-config.servic
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AngularMaterialModule,
   ],
   // providers: [

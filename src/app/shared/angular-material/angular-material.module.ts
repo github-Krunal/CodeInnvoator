@@ -41,6 +41,7 @@ import { MenuContentComponent } from 'src/app/component/codeInnvoator/menu-conte
 import { RouterModule } from '@angular/router';
 import { HammerModule } from '@angular/platform-browser';
 import { NotificationComponent } from '../component/notification/notification.component';
+import { NgTableDirectiveDirective } from '../directives/ng-table-directive.directive';
 
 
 const MaterialComponents = [
@@ -85,13 +86,13 @@ const MaterialComponents = [
   RouterModule,
   MatBadgeModule,
   HammerModule
-
 ];
 const componentDeclaration = [
   BreadcumComponent,
   HeaderComponent,
   MenuContentComponent,
-  NotificationComponent
+  NotificationComponent,
+  NgTableDirectiveDirective
 ]
 @NgModule({
   declarations: [componentDeclaration],

@@ -42,3 +42,10 @@
         width: 0;
     }
 }
+
+@mixin custom-ng-checkbox($size: 13) {
+    .mat-checkbox-inner-container {
+        width: $size + px;
+        height: $size + px;
+    }
+}

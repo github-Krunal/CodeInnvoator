@@ -1,0 +1,123 @@
+<div class="ng-material-table">
+    <mat-table [dataSource]="dataSource" [attr.column-length]="displayedColumns.length">
+        <ng-container *ngFor="let columnName of displayedColumns">
+            <span [ngSwitch]="columnName.name">
+                <p *ngSwitchCase="'select'">
+                    <ng-container *ngTemplateOutlet="select;context:{column:columnName.name,displayName:columnName.displayname}"></ng-container>
+                </p>
+                <p *ngSwitchDefault>
+                    <ng-container *ngTemplateOutlet="defaultColumn;context:{column:columnName.name,displayName:columnName.displayname}"></ng-container>
+                </p>
+            </span>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedvalue" id="ng-matheader-footer" NgTableDirective></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedvalue;" id="ng-matheader-footer" NgTableDirective></mat-row>
+
+        <ng-template #select let-table let-column="column" let-displayName='displayName'>
+            <ng-container matColumnDef="{{column}}">
+                <mat-header-cell *matHeaderCellDef id="{{column}}" NgTableDirective>
+                    <mat-checkbox>
+                    </mat-checkbox>
+                </mat-header-cell>
+                <mat-cell *matCellDef="let row" id="{{column}}" NgTableDirective>
+                    <mat-checkbox>
+                    </mat-checkbox>
+                </mat-cell>
+            </ng-container>
+        </ng-template>
+
+        <ng-template #defaultColumn let-table let-column="column" let-displayName='displayName'>
+            <ng-container matColumnDef="{{column}}">
+                <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> {{displayName}} </mat-header-cell>
+                <mat-cell *matCellDef="let element" NgTableDirective> {{element[column]}} </mat-cell>
+            </ng-container>
+        </ng-template>
+    </mat-table>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="ng-material-table">
+    <mat-table [dataSource]="dataSource" [attr.column-length]="displayedColumns.length">
+        <ng-container matColumnDef="select">
+            <mat-header-cell *matHeaderCellDef id="select" NgTableDirective>
+                <mat-checkbox>
+                </mat-checkbox>
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row" id="select" NgTableDirective>
+                <mat-checkbox>
+                </mat-checkbox>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="position">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> No. </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.position}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> Name </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.name}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="weight">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> Weight </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.weight}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="symbol">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> Symbol </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.symbol}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="City">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> City </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.City}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Country">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> Country </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.Country}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="state">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> state </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.state}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="department">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> department </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.department}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="location">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> location </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.location}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="level">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> level </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.level}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="religon">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> religon </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.religon}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="street">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> street </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.street}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="gender">
+            <mat-header-cell *matHeaderCellDef class="ng-material-table-header" NgTableDirective> gender </mat-header-cell>
+            <mat-cell *matCellDef="let element" NgTableDirective> {{element.gender}} </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns" id="ng-matheader-footer" NgTableDirective></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" id="ng-matheader-footer" NgTableDirective></mat-row>
+    </mat-table>
+</div> -->

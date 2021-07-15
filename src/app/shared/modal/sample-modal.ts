@@ -11,3 +11,10 @@ export class SideMenu {
 	public ToolTip?: string;
 	public RouterLink?: string;
 }
+export class ApiCall {
+	public albumId?: number;
+	public id?: number;
+	public title?: string;
+	public url?: string;
+	public thumbnailUrl?: string;
+}

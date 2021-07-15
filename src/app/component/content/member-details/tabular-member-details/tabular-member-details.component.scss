@@ -1,0 +1,12 @@
+@import "../../../../../assets/utility/mixin.scss";
+tabular-member-details {
+    .ng-material-table {
+        @include custom-ng-checkbox;
+        .ng-material-table-header {
+            @extend .title-sm;
+        }
+        .mat-table {
+            overflow-x: scroll;
+        }
+    }
+}

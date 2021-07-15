@@ -16,7 +16,6 @@ export class NotificationComponent implements OnInit {
   ngOnInit(): void {
     this.isCheckNotificationType();
   }
-
   public closedNotification() {
     this.snackBarRef.dismiss();
   }

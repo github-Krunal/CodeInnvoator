@@ -1,6 +1,16 @@
-<div>
-    <button class="btn btn-danger" (click)="getSnackbar(Notificer.Alert)">ALert</button>
-    <button class="btn btn-success" (click)="getSnackbar(Notificer.Success)">success</button>
-    <button class="btn btn-primary" (click)="getSnackbar(Notificer.Info)">Info</button>
-    <button class="btn btn-warning" (click)="getSnackbar(Notificer.Warning)">warning</button>
-</div>
+<!-- <div class="row">
+    <div class="col-md-12">
+        <div class="custom-form-group member-date-range  float-end">
+            <mat-form-field appearance="outline" floatLabel="never">
+                <mat-date-range-input [formGroup]="campaignTwo" [rangePicker]="campaignTwoPicker" [comparisonStart]="campaignOne.value.start" [comparisonEnd]="campaignOne.value.end" class="mat-date-range">
+                    <input matStartDate placeholder="Start date" formControlName="start" (click)="campaignTwoPicker.open()">
+                    <input matEndDate placeholder="End date" formControlName="end" (click)="campaignTwoPicker.open()">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="campaignTwoPicker"></mat-datepicker-toggle>
+                <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>
+            </mat-form-field>
+        </div>
+    </div>
+</div> -->
+
+<tabular-member-details></tabular-member-details>
